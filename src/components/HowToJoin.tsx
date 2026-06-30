@@ -22,16 +22,16 @@ const steps: Step[] = [
   {
     n: "02",
     icon: CheckIcon,
-    title: "Crea tu personaje",
+    title: "Lee las reglas y crea tu personaje",
     description:
-      "Completa el whitelist, diseña tu historia y prepara tu primer día en la ciudad.",
+      "Conoce las normas, diseña la historia de tu personaje y prepara tu primer día en la ciudad.",
   },
   {
     n: "03",
     icon: PlayIcon,
     title: "Conéctate y juega",
     description:
-      "Abre FiveM, conéctate al servidor y vive tu rol. La ciudad te está esperando.",
+      "La reapertura está muy cerca. Cuando abramos, te conectas y empiezas a vivir tu rol.",
   },
 ];
 

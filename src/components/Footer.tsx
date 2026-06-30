@@ -3,8 +3,8 @@ import { site, asset } from "@/config/site";
 import { DiscordIcon, PlayIcon } from "./icons";
 
 const nav = [
-  { href: "#servidor", label: "El Servidor" },
-  { href: "#caracteristicas", label: "Características" },
+  { href: "#caracteristicas", label: "Por qué Elemental" },
+  { href: "#transferencia", label: "Transferencia" },
   { href: "#unirte", label: "Cómo Unirte" },
   { href: "#galeria", label: "Galería" },
   { href: "#faq", label: "FAQ" },

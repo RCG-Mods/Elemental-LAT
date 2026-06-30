@@ -5,24 +5,32 @@ import { SectionHeading } from "./SectionHeading";
 
 const faqs = [
   {
-    q: "¿Qué necesito para jugar?",
-    a: "Necesitas una copia legal de GTA V (PC) y el cliente de FiveM instalado. Después solo te unes a nuestro Discord y te conectas al servidor.",
-  },
-  {
-    q: "¿El servidor tiene whitelist?",
-    a: "Sí. Para mantener la calidad del rol, el ingreso pasa por un proceso de whitelist sencillo que se gestiona desde el Discord.",
+    q: "¿Qué significa que sea “semi-serio”?",
+    a: "Respetamos las bases del roleplay —valor por la vida, no metagaming, no powergaming, interpretación coherente y respeto entre jugadores—, pero el objetivo principal sigue siendo divertirse. No castigamos situaciones que no afecten a otros jugadores solo porque “así se hace en otros servidores”.",
   },
   {
     q: "¿Es pay-to-win?",
-    a: "No. La tienda incluye apoyos cosméticos y de conveniencia, nunca ventajas que rompan el equilibrio del rol o la economía.",
+    a: "No. Todo el contenido importante, incluidas las propiedades, se consigue con dinero IC. Las contribuciones económicas se limitan a elementos estéticos que no otorgan ventajas injustas, siempre respetando los lineamientos de Rockstar y Cfx.re.",
   },
   {
-    q: "¿Qué framework usa el servidor?",
-    a: "Corremos sobre un framework moderno y optimizado, con scripts personalizados para una experiencia fluida y estable.",
+    q: "¿Cómo funciona la economía?",
+    a: "Está basada en USD para mantener una referencia consistente, pero eso no significa que todo sea carísimo. Puedes comprar vehículos, tener una propiedad y crear negocios sin pasar semanas farmeando: el tiempo es para el rol y para divertirse.",
   },
   {
-    q: "¿Puedo crear mi propia banda o negocio?",
-    a: "Claro. Puedes postular facciones, organizaciones y negocios legales. El staff evalúa cada propuesta para integrarla a la ciudad.",
+    q: "Vengo de otra ciudad, ¿empiezo de cero?",
+    a: "No necesariamente. Con nuestro Programa de Transferencia de Bienes, si demuestras patrimonio o inversión importante en otra ciudad, evaluamos tu caso para darte facilidades (nunca regalos) y reconstruir tu rol aquí.",
+  },
+  {
+    q: "¿Qué hay además del rol tradicional?",
+    a: "Eventos de terror, juegos cooperativos, actividades civiles, minijuegos, eventos especiales y uno de los sistemas de PvP más avanzados creados para un servidor latino, totalmente integrado con el resto del servidor.",
+  },
+  {
+    q: "¿La administración participa en el rol?",
+    a: "No. La administración no participa directamente dentro del rol para evitar conflictos de interés, y muchos procesos están automatizados para reducir la intervención administrativa.",
+  },
+  {
+    q: "¿El servidor va a mantenerse en el tiempo?",
+    a: "Esa es la idea. Elemental LAT está diseñado para durar años: respeta al 100% los Términos de Servicio de Cfx.re y Rockstar, tiene desarrollo activo sobre código propio y una economía pensada para ser sostenible.",
   },
 ];
 

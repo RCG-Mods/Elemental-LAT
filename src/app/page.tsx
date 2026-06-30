@@ -3,6 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { Hero } from "@/components/Hero";
 import { Stats } from "@/components/Stats";
 import { Features } from "@/components/Features";
+import { AssetTransfer } from "@/components/AssetTransfer";
 import { HowToJoin } from "@/components/HowToJoin";
 import { Gallery } from "@/components/Gallery";
 import { Faq } from "@/components/Faq";
@@ -18,6 +19,7 @@ export default function Home() {
         <Hero />
         <Stats />
         <Features />
+        <AssetTransfer />
         <HowToJoin />
         <Gallery />
         <Faq />

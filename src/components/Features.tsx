@@ -1,12 +1,12 @@
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 import {
-  CoinsIcon,
-  BriefcaseIcon,
+  CodeIcon,
+  GamepadIcon,
   ShieldIcon,
-  UsersIcon,
-  HomeIcon,
-  CarIcon,
+  CoinsIcon,
+  SparklesIcon,
+  ScaleIcon,
 } from "./icons";
 import type { ComponentType, SVGProps } from "react";
 
@@ -19,45 +19,45 @@ type Feature = {
 
 const features: Feature[] = [
   {
-    icon: CoinsIcon,
-    title: "Economía viva",
+    icon: CodeIcon,
+    title: "Desarrollo profesional",
     description:
-      "Mercado dinámico, negocios propios, sueldos y precios que responden a la comunidad. Tu esfuerzo se nota.",
-    accent: "text-[#ffd23f]",
+      "Equipo de desarrolladores propio. La mayoría de los sistemas son personalizados, no scripts descargados y ensamblados. Bugs y exploits se corrigen sobre nuestro propio código.",
+    accent: "text-[#00e5ff]",
   },
   {
-    icon: BriefcaseIcon,
-    title: "Trabajos legales e ilegales",
+    icon: GamepadIcon,
+    title: "Rol semi-serio",
     description:
-      "Desde mecánico, taxista o paramédico hasta los caminos más turbios. Tú eliges tu historia.",
-    accent: "text-teal",
-  },
-  {
-    icon: UsersIcon,
-    title: "Facciones y bandas",
-    description:
-      "Organizaciones con territorio, jerarquía y conflictos reales. Alíate o domina las calles.",
+      "Respetamos las bases del roleplay, pero sin perder de vista lo importante: divertirse. Cómodo para veteranos y para quienes juegan FiveM por primera vez.",
     accent: "text-[#ff6ec7]",
   },
   {
     icon: ShieldIcon,
-    title: "Policía y EMS activos",
+    title: "Anti-antirol desde el código",
     description:
-      "Cuerpos de seguridad y emergencias con protocolos serios que mantienen el rol equilibrado.",
+      "Muchos sistemas están diseñados para evitar el antirol desde la programación, no solo con reglas: registros de muertes, rastreo de objetos y más.",
     accent: "text-purple",
   },
   {
-    icon: HomeIcon,
-    title: "Propiedades y casas",
+    icon: CoinsIcon,
+    title: "Economía estable y sana",
     description:
-      "Compra, decora y administra tu hogar o local. Un lugar que de verdad es tuyo.",
-    accent: "text-[#00e5ff]",
+      "Basada en USD para una referencia consistente. Progresa, compra propiedades y crea negocios con dinero IC, sin pasar semanas farmeando.",
+    accent: "text-[#ffd23f]",
   },
   {
-    icon: CarIcon,
-    title: "Vehículos y tuning",
+    icon: SparklesIcon,
+    title: "Actividades para todos",
     description:
-      "Garajes, concesionarios y personalización profunda. Arma el auto que define tu personaje.",
+      "Eventos de terror, juegos cooperativos, actividades civiles, minijuegos y uno de los sistemas de PvP más avanzados del rol latino.",
+    accent: "text-teal",
+  },
+  {
+    icon: ScaleIcon,
+    title: "Reglas con lógica",
+    description:
+      "Cada norma tiene una razón de existir. Nada de copiar costumbres de otros servidores: reglas claras y un sistema intuitivo para consultarlas.",
     accent: "text-magenta",
   },
 ];
@@ -68,16 +68,15 @@ export function Features() {
       <div className="mx-auto max-w-6xl">
         <SectionHeading
           jp="特徴"
-          eyebrow="Características"
-          title="Todo lo que hace único a Elemental"
-          description="Sistemas pensados para un rol serio, inmersivo y con consecuencias reales. Sin pay-to-win, con comunidad."
+          eyebrow="Por qué Elemental"
+          title="Calidad demostrada con hechos"
+          description="No llenamos el nombre con etiquetas como “ROL SERIO”. Preferimos demostrarlo: un proyecto estable, con desarrollo activo y sistemas originales pensados para durar."
         />
 
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, i) => (
             <Reveal as="article" key={feature.title} delay={i * 80}>
               <div className="group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-6 backdrop-blur transition-all duration-300 hover:border-white/25 hover:bg-white/[0.06]">
-                {/* hover glow */}
                 <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-violet/0 blur-2xl transition-all duration-500 group-hover:bg-violet/30" />
                 <div
                   className={`mb-5 inline-flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/5 ${feature.accent}`}

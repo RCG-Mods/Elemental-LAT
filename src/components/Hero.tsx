@@ -16,8 +16,10 @@ export function Hero() {
           <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-teal" />
         </span>
         <span className="text-muted">
-          Servidor <span className="font-semibold text-white">Online</span> ·{" "}
-          {site.server.region}
+          <span className="font-semibold text-white">
+            {site.highlights.status}
+          </span>{" "}
+          · {site.highlights.community}
         </span>
       </div>
 

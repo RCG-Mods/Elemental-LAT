@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Orbitron, Noto_Sans_JP } from "next/font/google";
 import { site } from "@/config/site";
+import { SoundFx } from "@/components/SoundFx";
 import "./globals.css";
 
 // Official Elemental LAT typeface per RCG brand guide (Orbitron).
@@ -58,6 +59,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         {children}
+        <SoundFx />
       </body>
     </html>
   );
