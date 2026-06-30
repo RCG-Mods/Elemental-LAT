@@ -1,0 +1,256 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------------------
+   Elemental LAT — Official RCG brand tokens
+   Palette & gradients taken from the RCG style snippet.
+   Type: Orbitron (headers 700, body 500). Prefer vw/vh/vmin for sizing.
+---------------------------------------------------------------------------- */
+:root {
+  --background: #08010f;
+  --background-2: #11052a;
+  --foreground: #ffffff;
+  --muted: #b9a9e6;
+
+  /* RCG core palette */
+  --indigo: #19003a; /* rgb(25,0,58)   */
+  --violet: #5e00da; /* rgb(94,0,218)  */
+  --purple: #a200ff; /* rgb(162,0,255) */
+
+  /* RCG hover / accent palette */
+  --magenta: #d300d3; /* rgb(211,0,211) */
+  --gold: #b88a00; /* brightened from rgb(110,79,0) for contrast */
+  --teal: #009488; /* rgb(0,148,136)  */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-background-2: var(--background-2);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+
+  --color-indigo: var(--indigo);
+  --color-violet: var(--violet);
+  --color-purple: var(--purple);
+  --color-magenta: var(--magenta);
+  --color-gold: var(--gold);
+  --color-teal: var(--teal);
+
+  --font-display: var(--font-orbitron);
+  --font-sans: var(--font-orbitron);
+  --font-jp: var(--font-jp);
+}
+
+/* Japanese katakana/kanji decorative accents */
+.font-jp {
+  font-family: var(--font-jp), sans-serif;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-orbitron), system-ui, sans-serif;
+  font-weight: 500;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+::selection {
+  background: var(--magenta);
+  color: #0a0014;
+}
+
+/* ----- Gradients (from RCG snippet) ----- */
+
+/* Heading / brand accent gradient: indigo -> violet -> purple */
+.brand-gradient {
+  background-image: linear-gradient(
+    100deg,
+    var(--violet) 0%,
+    var(--purple) 50%,
+    var(--magenta) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Primary button gradient (snippet: .buttons.menus) */
+.btn-grad {
+  background: linear-gradient(
+    90deg,
+    rgba(25, 0, 58, 0.85),
+    rgba(94, 0, 218, 0.9),
+    rgba(162, 0, 255, 0.9)
+  );
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.15s ease;
+}
+/* Hover gradient (snippet: magenta -> gold -> teal) */
+.btn-grad:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(211, 0, 211, 0.9),
+    rgba(184, 138, 0, 0.85),
+    rgba(0, 148, 136, 0.9)
+  );
+}
+
+/* Left background gradient (snippet: .background-gradient) */
+.bg-grad-left {
+  background: linear-gradient(
+    90deg,
+    rgba(25, 0, 58, 1),
+    rgba(25, 0, 58, 0.8),
+    rgba(94, 0, 218, 0.4),
+    rgba(162, 0, 255, 0.2),
+    transparent 100%
+  );
+}
+
+/* ----- Neon glows (purple/magenta/teal) ----- */
+.text-glow {
+  text-shadow:
+    0 0 8px rgba(162, 0, 255, 0.55),
+    0 0 22px rgba(94, 0, 218, 0.45);
+}
+.text-glow-teal {
+  text-shadow:
+    0 0 8px rgba(0, 148, 136, 0.6),
+    0 0 22px rgba(0, 148, 136, 0.35);
+}
+.glow-purple {
+  box-shadow:
+    0 0 18px rgba(162, 0, 255, 0.45),
+    0 0 42px rgba(94, 0, 218, 0.25);
+}
+.glow-teal {
+  box-shadow:
+    0 0 18px rgba(0, 148, 136, 0.45),
+    0 0 42px rgba(0, 148, 136, 0.2);
+}
+
+/* ----- Retro striped sun (Vice City / outrun) ----- */
+.retro-sun {
+  background: linear-gradient(
+    to bottom,
+    #ff5fa2 0%,
+    #ff6ec7 28%,
+    #ff8a3d 62%,
+    #ffd23f 100%
+  );
+}
+.retro-sun::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  /* horizontal cut-out stripes on the lower half */
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 0.9vmin,
+    var(--background) 0.9vmin,
+    var(--background) 1.5vmin
+  );
+  -webkit-mask-image: linear-gradient(to bottom, transparent 38%, #000 56%);
+  mask-image: linear-gradient(to bottom, transparent 38%, #000 56%);
+}
+
+/* ----- Retro perspective grid floor ----- */
+.retro-grid {
+  background-image:
+    linear-gradient(to right, rgba(162, 0, 255, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(211, 0, 211, 0.3) 1px, transparent 1px);
+  background-size: 3vmin 3vmin;
+  transform: perspective(40vh) rotateX(62deg);
+  transform-origin: bottom center;
+  animation: grid-scroll 6s linear infinite;
+}
+
+@keyframes grid-scroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 3vmin;
+  }
+}
+
+/* Sun glow pulse */
+@keyframes sun-pulse {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.sun-pulse {
+  animation: sun-pulse 5s ease-in-out infinite;
+}
+
+/* Soft float */
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1.2vh);
+  }
+}
+.float-y {
+  animation: float-y 6s ease-in-out infinite;
+}
+
+/* CRT scanlines overlay */
+.scanlines::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.035) 0px,
+    rgba(255, 255, 255, 0.035) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  z-index: 1;
+}
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .retro-grid,
+  .sun-pulse,
+  .float-y {
+    animation: none !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
