@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 import { asset } from "@/config/site";
@@ -12,6 +15,26 @@ const shots: { label: string; span: string; hue: string; src?: string }[] = [
 ];
 
 export function Gallery() {
+  const [active, setActive] = useState<{ src: string; label: string } | null>(null);
+
+  useEffect(() => {
+    if (!active) return;
+
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setActive(null);
+    };
+    document.addEventListener("keydown", onKey);
+
+    // Lock background scroll while the lightbox is open.
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [active]);
+
   return (
     <section id="galeria" className="relative px-4 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl">
@@ -30,7 +53,21 @@ export function Gallery() {
               className={`${shot.span}`}
             >
               <div
-                className={`group relative flex h-full w-full items-end overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br ${shot.hue} p-4 backdrop-blur transition-all duration-300 hover:border-white/30`}
+                role={shot.src ? "button" : undefined}
+                tabIndex={shot.src ? 0 : undefined}
+                aria-label={shot.src ? `Ampliar imagen: ${shot.label}` : undefined}
+                onClick={shot.src ? () => setActive({ src: shot.src!, label: shot.label }) : undefined}
+                onKeyDown={
+                  shot.src
+                    ? (e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          setActive({ src: shot.src!, label: shot.label });
+                        }
+                      }
+                    : undefined
+                }
+                className={`group relative flex h-full w-full items-end overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br ${shot.hue} p-4 backdrop-blur transition-all duration-300 hover:border-white/30 ${shot.src ? "cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60" : ""}`}
               >
                 {shot.src && (
                   // eslint-disable-next-line @next/next/no-img-element
@@ -52,6 +89,39 @@ export function Gallery() {
           ))}
         </div>
       </div>
+
+      {active && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={active.label}
+          onClick={() => setActive(null)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-[#08010f]/90 p-4 backdrop-blur-sm sm:p-8"
+        >
+          <button
+            type="button"
+            aria-label="Cerrar"
+            onClick={() => setActive(null)}
+            className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/5 text-xl text-white/80 transition hover:border-white/40 hover:text-white"
+          >
+            ×
+          </button>
+          <figure
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-h-full max-w-5xl overflow-hidden rounded-2xl border border-white/15 shadow-2xl"
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={asset(active.src)}
+              alt={active.label}
+              className="max-h-[85vh] w-auto object-contain"
+            />
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#08010f] to-transparent p-4 text-sm font-semibold text-white">
+              {active.label}
+            </figcaption>
+          </figure>
+        </div>
+      )}
     </section>
   );
 }
