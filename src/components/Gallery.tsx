@@ -5,7 +5,7 @@ import { asset } from "@/config/site";
 // Placeholder tiles — replace `src` with real in-game screenshots later.
 const shots: { label: string; span: string; hue: string; src?: string }[] = [
   { label: "Vida nocturna", span: "sm:col-span-2 sm:row-span-2", hue: "from-[#ff2d95]/30 to-[#5e00da]/30", src: "/gallery/vida-nocturna.png" },
-  { label: "Persecución policial", span: "", hue: "from-[#00e5ff]/30 to-[#a200ff]/30" },
+  { label: "Persecución policial", span: "", hue: "from-[#00e5ff]/30 to-[#a200ff]/30", src: "/gallery/persecucion.png" },
   { label: "Negocios", span: "", hue: "from-[#ffd23f]/25 to-[#ff6ec7]/30", src: "/gallery/negocios.png" },
   { label: "Eventos", span: "", hue: "from-[#009488]/30 to-[#5e00da]/30", src: "/gallery/eventos.png" },
   { label: "Tuning & garaje", span: "", hue: "from-[#a200ff]/30 to-[#ff2d95]/30", src: "/gallery/tuning.png" },
