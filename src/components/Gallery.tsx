@@ -1,9 +1,10 @@
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
+import { asset } from "@/config/site";
 
 // Placeholder tiles — replace `src` with real in-game screenshots later.
-const shots = [
-  { label: "Vida nocturna", span: "sm:col-span-2 sm:row-span-2", hue: "from-[#ff2d95]/30 to-[#5e00da]/30" },
+const shots: { label: string; span: string; hue: string; src?: string }[] = [
+  { label: "Vida nocturna", span: "sm:col-span-2 sm:row-span-2", hue: "from-[#ff2d95]/30 to-[#5e00da]/30", src: "/gallery/vida-nocturna.png" },
   { label: "Persecución policial", span: "", hue: "from-[#00e5ff]/30 to-[#a200ff]/30" },
   { label: "Negocios", span: "", hue: "from-[#ffd23f]/25 to-[#ff6ec7]/30" },
   { label: "Eventos", span: "", hue: "from-[#009488]/30 to-[#5e00da]/30" },
@@ -31,6 +32,14 @@ export function Gallery() {
               <div
                 className={`group relative flex h-full w-full items-end overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br ${shot.hue} p-4 backdrop-blur transition-all duration-300 hover:border-white/30`}
               >
+                {shot.src && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={asset(shot.src)}
+                    alt={shot.label}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                )}
                 <div className="absolute inset-0 bg-[radial-gradient(120%_120%_at_50%_120%,transparent_40%,#08010f_100%)]" />
                 <span className="font-jp absolute right-3 top-3 text-xs tracking-widest text-white/30">
                   画像
