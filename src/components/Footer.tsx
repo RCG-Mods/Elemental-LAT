@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { site, asset } from "@/config/site";
 import { DiscordIcon, PlayIcon } from "./icons";
 
@@ -7,6 +8,7 @@ const nav = [
   { href: "#transferencia", label: "Transferencia" },
   { href: "#unirte", label: "Cómo Unirte" },
   { href: "#galeria", label: "Galería" },
+  { href: "/normativa", label: "Normativa" },
   { href: "#faq", label: "FAQ" },
 ];
 
@@ -34,15 +36,25 @@ export function Footer() {
           <span className="mb-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/40">
             Navegación
           </span>
-          {nav.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-sm text-muted transition-colors duration-200 hover:text-white"
-            >
-              {item.label}
-            </a>
-          ))}
+          {nav.map((item) =>
+            item.href.startsWith("/") ? (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="text-sm text-muted transition-colors duration-200 hover:text-white"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              <a
+                key={item.href}
+                href={item.href}
+                className="text-sm text-muted transition-colors duration-200 hover:text-white"
+              >
+                {item.label}
+              </a>
+            ),
+          )}
         </nav>
 
         <div className="flex flex-col gap-3">

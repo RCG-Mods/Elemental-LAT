@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { SectionHeading } from "./SectionHeading";
 import { site } from "@/config/site";
@@ -65,7 +66,7 @@ export function HowToJoin() {
           ))}
         </div>
 
-        <Reveal className="mt-10 flex justify-center">
+        <Reveal className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
           <a
             href={site.discordUrl}
             target="_blank"
@@ -75,6 +76,12 @@ export function HowToJoin() {
             Empezar ahora
             <ArrowRightIcon className="h-5 w-5 transition-transform duration-200 group-hover:translate-x-1" />
           </a>
+          <Link
+            href="/normativa"
+            className="flex items-center gap-2 rounded-2xl border border-white/15 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:border-teal/50 hover:text-teal"
+          >
+            Leer la normativa
+          </Link>
         </Reveal>
       </div>
     </section>
