@@ -3,7 +3,7 @@ import { getNormativa } from "@/lib/normativa";
 import { NormativaShell } from "@/components/normativa/NormativaShell";
 import { NormativaMarkdown } from "@/components/normativa/NormativaMarkdown";
 import { NormativaHeader } from "@/components/normativa/NormativaHeader";
-import { RetroBackground } from "@/components/RetroBackground";
+import { NormativaBackground } from "@/components/normativa/NormativaBackground";
 import { Footer } from "@/components/Footer";
 import { site } from "@/config/site";
 
@@ -21,7 +21,7 @@ export default function NormativaPage() {
 
   return (
     <>
-      <RetroBackground />
+      <NormativaBackground />
       <NormativaHeader version={version} />
       <main className="flex-1 pt-24 sm:pt-28">
         <div

@@ -222,7 +222,9 @@ export function NormativaShell({ books, children }: Props) {
         </div>
       )}
 
-      <div className="min-w-0">{children}</div>
+      <div className="min-w-0 rounded-2xl border border-white/10 bg-background/80 px-5 py-6 shadow-[0_10px_50px_rgba(0,0,0,0.45)] backdrop-blur-xl sm:px-8 sm:py-8">
+        {children}
+      </div>
     </div>
   );
 }
