@@ -12,6 +12,7 @@ const links = [
   { href: "#unirte", label: "Cómo Unirte" },
   { href: "#galeria", label: "Galería" },
   { href: "/normativa", label: "Normativa" },
+  { href: "/tienda", label: "Tienda" },
   { href: "#faq", label: "FAQ" },
 ];
 
