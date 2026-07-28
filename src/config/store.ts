@@ -111,13 +111,10 @@ export const storeCategories: StoreCategory[] = [
     image: "/store/departamentos.png",
     imageAlt: "Torre Elemental y Torre Central de noche en el centro de la ciudad",
     columns: [
-      { key: "zona", label: "Zona" },
-      { key: "nota", label: "Notas" },
+      { key: "ubicaciones", label: "Ubicaciones" },
     ],
     items: [
-      { name: "Departamento — Torre Elemental", price: "$30", zona: "Centro", nota: "Torre principal de Elemental" },
-      { name: "Departamento — Torre Central", price: "$30", zona: "Centro", nota: "Segunda torre del centro" },
-      { name: "Departamento — Playa", price: "$30", zona: "Playa", nota: "Zona costera" },
+      { name: "Departamentos", price: "$30", ubicaciones: "Torre Elemental, Torre Central y Playa" },
     ],
     terms: [
       "Cualquier departamento dentro de Elemental tiene un costo único de $30, sin importar la ubicación.",
