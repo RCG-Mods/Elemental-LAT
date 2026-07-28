@@ -109,9 +109,8 @@ export const storeCategories: StoreCategory[] = [
       },
     ],
     terms: [
-      "Cada archivo individual dentro de la carpeta del vehículo puede pesar como máximo 14 MB.",
-      "La carpeta completa del vehículo, sin comprimir, puede pesar como máximo 100 MB por el precio base.",
-      "Si la carpeta supera los 100 MB sin comprimir, se aplica un recargo de $20 sobre el precio del vehículo.",
+      "Si algún archivo por separado supera los 14 MB, deberá optimizarse (no genera recargo).",
+      "El recargo de $20 aplica únicamente si la carpeta completa del vehículo, sin comprimir, supera los 100 MB.",
       "El vehículo se entrega con documentación IC a nombre del comprador.",
     ],
   },
