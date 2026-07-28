@@ -33,11 +33,20 @@ export type StoreColumn = {
   align?: "left" | "right" | "center";
 };
 
-/** An item row. `name` + `price` are always present; the rest match `columns`. */
+/**
+ * An item row. `name` + `price` are always present.
+ * - In "table" layout, extra string keys match the category's `columns`.
+ * - In "cards" layout, `image`/`imageAlt`/`desc` drive the card.
+ */
 export type StoreItem = {
   name: string;
   price: string;
-} & Record<string, string>;
+  /** Card image (path under /public, e.g. "/store/xxx.png"). Cards layout only. */
+  image?: string;
+  imageAlt?: string;
+  /** Short description shown on the card. Cards layout only. */
+  desc?: string;
+} & Record<string, string | undefined>;
 
 export type StoreCategory = {
   id: string;
@@ -47,7 +56,9 @@ export type StoreCategory = {
   icon: StoreIconKey;
   /** One-line summary shown under the category title. */
   tagline: string;
-  /** Optional showcase image (path under /public, e.g. "/store/xxx.png"). */
+  /** How to present the items. Defaults to "table". */
+  layout?: "table" | "cards";
+  /** Optional showcase image (path under /public). Used in "table" layout. */
   image?: string;
   /** Alt text for the showcase image. */
   imageAlt?: string;
@@ -107,18 +118,27 @@ export const storeCategories: StoreCategory[] = [
     jp: "不動産",
     icon: "propiedades",
     tagline:
-      "Departamentos para tu personaje en tres ubicaciones: dos en el centro (Torre Elemental y Torre Central) y los departamentos de la playa.",
-    image: "/store/departamentos.png",
-    imageAlt: "Torre Elemental y Torre Central de noche en el centro de la ciudad",
-    columns: [
-      { key: "ubicaciones", label: "Ubicaciones" },
-    ],
+      "Viviendas para tu personaje: departamentos en el centro y la playa, y casas normales.",
+    layout: "cards",
+    columns: [],
     items: [
-      { name: "Departamentos", price: "$30", ubicaciones: "Torre Elemental, Torre Central y Playa" },
+      {
+        name: "Departamentos",
+        price: "$30",
+        image: "/store/departamentos.png",
+        imageAlt: "Torre Elemental y Torre Central de noche en el centro de la ciudad",
+        desc: "Torre Elemental, Torre Central y Playa.",
+      },
+      {
+        name: "Casas normales",
+        price: "$50",
+        image: "/store/casas-normales.png",
+        imageAlt: "Casa moderna frente a la costa",
+      },
     ],
     terms: [
       "Cualquier departamento dentro de Elemental tiene un costo único de $30, sin importar la ubicación.",
-      "El departamento queda registrado a nombre del personaje comprador.",
+      "La propiedad queda registrada a nombre del personaje comprador.",
     ],
   },
   {

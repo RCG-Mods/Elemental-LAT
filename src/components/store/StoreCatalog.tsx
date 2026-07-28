@@ -115,7 +115,41 @@ export function StoreCatalog({ categories }: { categories: StoreCategory[] }) {
                 </div>
               )}
 
-              {/* Price table */}
+              {/* Cards layout — image-driven items (e.g. properties) */}
+              {cat.layout === "cards" ? (
+                <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+                  {cat.items.map((item, i) => (
+                    <article
+                      key={`${cat.id}-${i}`}
+                      className="group overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-colors hover:border-white/25"
+                    >
+                      {item.image && (
+                        <div className="relative aspect-[16/10] overflow-hidden">
+                          <Image
+                            src={asset(item.image)}
+                            alt={item.imageAlt ?? item.name}
+                            width={640}
+                            height={400}
+                            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                          <span className="absolute right-3 top-3 rounded-lg border border-white/10 bg-background/80 px-2.5 py-1 font-mono text-sm font-semibold text-teal backdrop-blur">
+                            {item.price}
+                          </span>
+                        </div>
+                      )}
+                      <div className="p-4">
+                        <h3 className="text-base font-bold text-white">
+                          {item.name}
+                        </h3>
+                        {item.desc && (
+                          <p className="mt-1 text-sm text-muted">{item.desc}</p>
+                        )}
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              ) : (
+              /* Price table */
               <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.02]">
                 <table className="w-full min-w-[640px] border-collapse text-sm">
                   <thead>
@@ -157,6 +191,7 @@ export function StoreCatalog({ categories }: { categories: StoreCategory[] }) {
                   </tbody>
                 </table>
               </div>
+              )}
 
               {/* Category-specific clauses */}
               {cat.terms.length > 0 && (
