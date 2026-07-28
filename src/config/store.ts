@@ -193,6 +193,7 @@ export const storeCategories: StoreCategory[] = [
     terms: [
       "Las prendas y accesorios son puramente cosméticos salvo que se indique un efecto.",
       "Un accesorio robado en rol pasa a manos del atacante según las reglas IC.",
+      "Cada archivo dentro de la carpeta del accesorio puede pesar como máximo 14 MB.",
     ],
   },
   {
@@ -213,6 +214,7 @@ export const storeCategories: StoreCategory[] = [
     terms: [
       "Todas las armas serán revisadas por la administración.",
       "La metadata siempre será una copia de un arma vanilla: sin daño extra, sin recarga extra, sin cargadores extra ni ninguna otra mejora.",
+      "Cada archivo dentro de la carpeta del arma puede pesar como máximo 14 MB.",
     ],
   },
   {
