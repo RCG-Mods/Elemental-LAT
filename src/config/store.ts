@@ -102,10 +102,10 @@ export const storeCategories: StoreCategory[] = [
     columns: [],
     items: [
       {
-        name: "Venom",
+        name: "Auto personalizado",
         price: "$60",
         image: "/store/venom.png",
-        imageAlt: "Superdeportivo Venom gris con alerón",
+        imageAlt: "Superdeportivo gris con alerón",
       },
     ],
     terms: [
