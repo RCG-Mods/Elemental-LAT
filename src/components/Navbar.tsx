@@ -9,7 +9,6 @@ import { DiscordIcon, PlayIcon } from "./icons";
 const links = [
   { href: "#caracteristicas", label: "Por qué Elemental" },
   { href: "#transferencia", label: "Transferencia" },
-  { href: "#unirte", label: "Cómo Unirte" },
   { href: "#galeria", label: "Galería" },
   { href: "/normativa", label: "Normativa" },
   { href: "/tienda", label: "Tienda" },
