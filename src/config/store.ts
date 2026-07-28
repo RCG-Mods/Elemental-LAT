@@ -111,7 +111,6 @@ export const storeCategories: StoreCategory[] = [
     terms: [
       "Si algún archivo por separado supera los 14 MB, deberá optimizarse (no genera recargo).",
       "El recargo de $20 aplica únicamente si la carpeta completa del vehículo, sin comprimir, supera los 100 MB.",
-      "El vehículo se entrega con documentación IC a nombre del comprador.",
     ],
   },
   {
