@@ -211,8 +211,8 @@ export const storeCategories: StoreCategory[] = [
       { name: "Ejemplo — Pistola", price: "—", categoria: "Ligera", municion: "9mm", nota: "Requiere licencia" },
     ],
     terms: [
-      "La venta de armas es exclusiva para armerías y facciones con licencia aprobada por el staff.",
-      "El uso de cualquier arma queda sujeto al código penal IC y a las normas de PvP.",
+      "Todas las armas serán revisadas por la administración.",
+      "La metadata siempre será una copia de un arma vanilla: sin daño extra, sin recarga extra, sin cargadores extra ni ninguna otra mejora.",
     ],
   },
   {
