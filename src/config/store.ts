@@ -169,8 +169,9 @@ export const storeCategories: StoreCategory[] = [
       { name: "Ejemplo — Local comercial", price: "—", tipo: "Comercio", empleados: "—", nota: "Pendiente de precio" },
     ],
     terms: [
-      "La compra de un negocio implica el compromiso de mantenerlo activo en rol.",
-      "El staff puede reasignar un negocio inactivo tras el periodo indicado en la normativa.",
+      "Los negocios tienen un valor inicial de compra y un valor mensual.",
+      "Puedes pagar como máximo dos meses por adelantado.",
+      "Si durante el último mes no se abrió el negocio, no podrás pagar el mes siguiente y se te retirará el negocio.",
     ],
   },
   {
