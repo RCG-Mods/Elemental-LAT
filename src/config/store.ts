@@ -85,6 +85,9 @@ export const storeTerms: string[] = [
   "Los ítems adquiridos son personales e intransferibles salvo que la ficha del ítem indique lo contrario.",
   "El staff se reserva el derecho de ajustar, retirar o balancear cualquier ítem por motivos de estabilidad o economía del servidor.",
   "Ningún ítem otorga ventajas de administración, inmunidad a las normas ni excepciones al reglamento IC/OOC.",
+  "Todo archivo entregado tiene derecho a una (1) actualización gratuita, solicitada dentro de las 2 semanas posteriores a la entrega.",
+  "Después de la actualización gratuita, cada actualización posterior cuesta el 50% del precio original del archivo.",
+  "Se considera actualización cualquier archivo nuevo que reemplace al anterior, aunque no tenga relación con el original. Excepción: en las casas, para contar como actualización el archivo debe ubicarse en el mismo lugar físico que la casa anterior.",
 ];
 
 /**
@@ -109,6 +112,7 @@ export const storeCategories: StoreCategory[] = [
       },
     ],
     terms: [
+      "Todos los vehículos pasan por la administración para ajustar su conductividad; el cambio se comenta en el ticket. Podrás probar cómo queda el vehículo antes de pagar para confirmar si es de tu agrado, pero la administración tiene el deber de regularlo por el bien del servidor y mantener un rol justo.",
       "Si algún archivo por separado supera los 14 MB, deberá optimizarse (no genera recargo).",
       "El recargo de $20 aplica únicamente si la carpeta completa del vehículo, sin comprimir, supera los 100 MB.",
     ],
