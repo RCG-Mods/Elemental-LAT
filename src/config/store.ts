@@ -47,6 +47,10 @@ export type StoreCategory = {
   icon: StoreIconKey;
   /** One-line summary shown under the category title. */
   tagline: string;
+  /** Optional showcase image (path under /public, e.g. "/store/xxx.png"). */
+  image?: string;
+  /** Alt text for the showcase image. */
+  imageAlt?: string;
   /** Extra columns (besides Ítem + Precio) for this category's table. */
   columns: StoreColumn[];
   items: StoreItem[];
@@ -102,19 +106,22 @@ export const storeCategories: StoreCategory[] = [
     name: "Propiedades",
     jp: "不動産",
     icon: "propiedades",
-    tagline: "Casas, departamentos y bodegas para tu personaje.",
+    tagline:
+      "Departamentos para tu personaje en tres ubicaciones: dos en el centro (Torre Elemental y Torre Central) y los departamentos de la playa.",
+    image: "/store/departamentos.png",
+    imageAlt: "Torre Elemental y Torre Central de noche en el centro de la ciudad",
     columns: [
-      { key: "tipo", label: "Tipo" },
-      { key: "capacidad", label: "Capacidad", align: "right" },
+      { key: "zona", label: "Zona" },
       { key: "nota", label: "Notas" },
     ],
     items: [
-      // PLACEHOLDER — reemplazar con el catálogo real de propiedades.
-      { name: "Ejemplo — Departamento", price: "—", tipo: "Vivienda", capacidad: "—", nota: "Pendiente de precio" },
+      { name: "Departamento — Torre Elemental", price: "$30", zona: "Centro", nota: "Torre principal de Elemental" },
+      { name: "Departamento — Torre Central", price: "$30", zona: "Centro", nota: "Segunda torre del centro" },
+      { name: "Departamento — Playa", price: "$30", zona: "Playa", nota: "Zona costera" },
     ],
     terms: [
-      "La propiedad queda registrada a nombre del personaje comprador.",
-      "El almacenamiento (stash) tiene una capacidad fija según el tipo de propiedad.",
+      "Cualquier departamento dentro de Elemental tiene un costo único de $30, sin importar la ubicación.",
+      "El departamento queda registrado a nombre del personaje comprador.",
     ],
   },
   {

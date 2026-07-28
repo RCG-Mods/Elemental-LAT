@@ -1,7 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import type { ComponentType, SVGProps } from "react";
+import { asset } from "@/config/site";
 import type { StoreCategory, StoreIconKey } from "@/config/store";
 import {
   CarIcon,
@@ -99,6 +101,19 @@ export function StoreCatalog({ categories }: { categories: StoreCategory[] }) {
                   <p className="mt-1 max-w-2xl text-sm text-muted">{cat.tagline}</p>
                 </div>
               </div>
+
+              {/* Optional showcase image */}
+              {cat.image && (
+                <div className="mb-6 overflow-hidden rounded-2xl border border-white/10">
+                  <Image
+                    src={asset(cat.image)}
+                    alt={cat.imageAlt ?? cat.name}
+                    width={1280}
+                    height={720}
+                    className="h-auto w-full object-cover"
+                  />
+                </div>
+              )}
 
               {/* Price table */}
               <div className="overflow-x-auto rounded-2xl border border-white/10 bg-white/[0.02]">
