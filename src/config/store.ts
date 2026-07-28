@@ -135,6 +135,12 @@ export const storeCategories: StoreCategory[] = [
         image: "/store/casas-normales.png",
         imageAlt: "Casa moderna frente a la costa",
       },
+      {
+        name: "Casas grandes",
+        price: "$80",
+        image: "/store/casas-grandes.png",
+        imageAlt: "Mansión de lujo con piscina en las colinas",
+      },
     ],
     terms: [
       "Cualquier departamento dentro de Elemental tiene un costo único de $30, sin importar la ubicación.",
