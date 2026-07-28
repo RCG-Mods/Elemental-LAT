@@ -98,18 +98,21 @@ export const storeCategories: StoreCategory[] = [
     jp: "車両",
     icon: "vehiculos",
     tagline: "Coches, motos y vehículos especiales disponibles para compra.",
-    columns: [
-      { key: "clase", label: "Clase" },
-      { key: "peso", label: "Peso máx. maletero", align: "right" },
-      { key: "nota", label: "Notas" },
-    ],
+    layout: "cards",
+    columns: [],
     items: [
-      // PLACEHOLDER — reemplazar con el catálogo real de vehículos.
-      { name: "Ejemplo — Sedán", price: "—", clase: "Civil", peso: "—", nota: "Pendiente de precio" },
+      {
+        name: "Venom",
+        price: "$60",
+        image: "/store/venom.png",
+        imageAlt: "Superdeportivo Venom gris con alerón",
+      },
     ],
     terms: [
+      "Cada archivo individual dentro de la carpeta del vehículo puede pesar como máximo 14 MB.",
+      "La carpeta completa del vehículo, sin comprimir, puede pesar como máximo 100 MB por el precio base.",
+      "Si la carpeta supera los 100 MB sin comprimir, se aplica un recargo de $20 sobre el precio del vehículo.",
       "El vehículo se entrega con documentación IC a nombre del comprador.",
-      "El peso máximo del maletero es fijo por modelo y no es ampliable.",
     ],
   },
   {
