@@ -67,7 +67,31 @@ export default function TiendaPage() {
                 </li>
               ))}
             </ol>
-            <p className="mt-5 rounded-xl border border-teal/20 bg-teal/5 px-4 py-3 text-xs text-white/70">
+
+            {/* Per-category clauses */}
+            {storeCategories.some((c) => c.terms.length > 0) && (
+              <div className="mt-8 grid gap-6 border-t border-white/10 pt-6 sm:grid-cols-2">
+                {storeCategories
+                  .filter((c) => c.terms.length > 0)
+                  .map((cat) => (
+                    <div key={cat.id}>
+                      <h3 className="mb-2 text-sm font-semibold text-white">
+                        {cat.name}
+                      </h3>
+                      <ul className="space-y-1.5 text-sm leading-relaxed text-muted">
+                        {cat.terms.map((term, i) => (
+                          <li key={i} className="flex gap-2">
+                            <span className="text-purple/70">•</span>
+                            <span>{term}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+              </div>
+            )}
+
+            <p className="mt-8 rounded-xl border border-teal/20 bg-teal/5 px-4 py-3 text-xs text-white/70">
               {storeMeta.buyNote}
             </p>
           </div>

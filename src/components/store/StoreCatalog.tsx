@@ -192,18 +192,6 @@ export function StoreCatalog({ categories }: { categories: StoreCategory[] }) {
                 </table>
               </div>
               )}
-
-              {/* Category-specific clauses */}
-              {cat.terms.length > 0 && (
-                <ul className="mt-4 space-y-1.5 text-xs text-white/50">
-                  {cat.terms.map((term, i) => (
-                    <li key={i} className="flex gap-2">
-                      <span className="text-purple/70">•</span>
-                      <span>{term}</span>
-                    </li>
-                  ))}
-                </ul>
-              )}
             </section>
           );
         })}
