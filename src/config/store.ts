@@ -151,7 +151,6 @@ export const storeCategories: StoreCategory[] = [
       },
     ],
     terms: [
-      "Cualquier departamento dentro de Elemental tiene un costo único de $30, sin importar la ubicación.",
       "La propiedad queda registrada a nombre del personaje comprador.",
       "Al comprar una casa, la casa te pertenece. Si ninguna de las personas con llaves de esa casa entra durante 6 meses, se abrirá un ticket con el comprador; si un mes después del ticket sigue sin entrar nadie con llaves, se retirará la casa.",
     ],
