@@ -201,6 +201,12 @@ export const storeCategories: StoreCategory[] = [
         image: "/store/cadenas.png",
         imageAlt: "Cadena personalizada roja en el cuello de un personaje",
       },
+      {
+        name: "Accesorios",
+        price: "$10",
+        image: "/store/accesorio.png",
+        imageAlt: "Accesorio personalizado sostenido por un personaje",
+      },
     ],
     terms: [
       "Cada archivo dentro de la carpeta del accesorio puede pesar como máximo 14 MB.",
