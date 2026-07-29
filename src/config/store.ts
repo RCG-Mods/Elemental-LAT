@@ -80,7 +80,6 @@ export const storeMeta = {
 
 /** Global Terms & Conditions that apply to every purchase. */
 export const storeTerms: string[] = [
-  "Todos los precios se expresan en dólares del servidor (economía IC en USD).",
   "La compra de cualquier ítem es un acuerdo OOC entre el jugador y el staff; el objeto se entrega dentro del personaje (IC) una vez confirmado el pago.",
   "Los ítems adquiridos son personales e intransferibles salvo que la ficha del ítem indique lo contrario.",
   "El staff se reserva el derecho de ajustar, retirar o balancear cualquier ítem por motivos de estabilidad o economía del servidor.",
