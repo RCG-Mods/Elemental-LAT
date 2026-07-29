@@ -188,10 +188,10 @@ export const storeCategories: StoreCategory[] = [
   },
   {
     id: "prendas",
-    name: "Prendas y accesorios",
+    name: "Prendas",
     jp: "装飾品",
     icon: "prendas",
-    tagline: "Cadenas, relojes y accesorios cosméticos para tu personaje.",
+    tagline: "Cadenas, relojes y prendas personalizadas para tu personaje.",
     layout: "cards",
     columns: [],
     items: [
@@ -201,15 +201,9 @@ export const storeCategories: StoreCategory[] = [
         image: "/store/cadenas.png",
         imageAlt: "Cadena personalizada roja en el cuello de un personaje",
       },
-      {
-        name: "Accesorios",
-        price: "$10",
-        image: "/store/accesorio.png",
-        imageAlt: "Accesorio personalizado sostenido por un personaje",
-      },
     ],
     terms: [
-      "Cada archivo dentro de la carpeta del accesorio puede pesar como máximo 14 MB.",
+      "Cada archivo dentro de la carpeta de la prenda puede pesar como máximo 14 MB.",
     ],
   },
   {
@@ -240,19 +234,19 @@ export const storeCategories: StoreCategory[] = [
     name: "Ítems para negocios",
     jp: "アイテム",
     icon: "items",
-    tagline: "Objetos con o sin prop para equipar y operar tus negocios.",
-    columns: [
-      { key: "prop", label: "Prop" },
-      { key: "uso", label: "Uso" },
-      { key: "nota", label: "Notas" },
-    ],
+    tagline: "Objetos con o sin prop para equipar y operar tus negocios, y accesorios personalizados.",
+    layout: "cards",
+    columns: [],
     items: [
-      // PLACEHOLDER — reemplazar con el catálogo real de ítems.
-      { name: "Ejemplo — Máquina", price: "—", prop: "Sí", uso: "Negocio", nota: "Pendiente de precio" },
+      {
+        name: "Accesorios",
+        price: "$10",
+        image: "/store/accesorio.png",
+        imageAlt: "Accesorio personalizado sostenido por un personaje",
+      },
     ],
     terms: [
-      "Algunos ítems incluyen un prop físico colocable; otros son solo de inventario.",
-      "La ubicación de un prop de negocio debe ser aprobada por el staff.",
+      "Cada archivo dentro de la carpeta del accesorio puede pesar como máximo 14 MB.",
     ],
   },
 ];
