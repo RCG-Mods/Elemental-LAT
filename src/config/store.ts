@@ -161,14 +161,16 @@ export const storeCategories: StoreCategory[] = [
     jp: "ビジネス",
     icon: "negocios",
     tagline: "Locales y licencias comerciales para emprender.",
-    columns: [
-      { key: "tipo", label: "Tipo" },
-      { key: "empleados", label: "Empleados máx.", align: "right" },
-      { key: "nota", label: "Notas" },
-    ],
+    layout: "cards",
+    columns: [],
     items: [
-      // PLACEHOLDER — reemplazar con el catálogo real de negocios.
-      { name: "Ejemplo — Local comercial", price: "—", tipo: "Comercio", empleados: "—", nota: "Pendiente de precio" },
+      {
+        name: "Negocios",
+        price: "$30",
+        image: "/store/negocios.png",
+        imageAlt: "Torre iluminada de noche en la ciudad",
+        desc: "Pago inicial de $30 + $10 mensuales de mantención.",
+      },
     ],
     terms: [
       "Los negocios tienen un valor inicial de compra y un valor mensual.",
