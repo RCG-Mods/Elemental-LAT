@@ -118,6 +118,7 @@ export const storeCategories: StoreCategory[] = [
       "Todos los vehículos pasan por la administración para ajustar su conductividad; el cambio se comenta en el ticket. Podrás probar cómo queda el vehículo antes de pagar para confirmar si es de tu agrado, pero la administración tiene el deber de regularlo por el bien del servidor y mantener un rol justo.",
       "Si algún archivo por separado supera los 14 MB, deberá optimizarse (no genera recargo).",
       "El recargo de $20 aplica únicamente si la carpeta completa del vehículo, sin comprimir, supera los 100 MB.",
+      "Todos los vehículos (autos y aeronaves) que traigan armas incorporadas tendrán esas armas desactivadas.",
     ],
   },
   {
