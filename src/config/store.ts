@@ -113,6 +113,12 @@ export const storeCategories: StoreCategory[] = [
         image: "/store/venom.png",
         imageAlt: "Superdeportivo gris con alerón",
       },
+      {
+        name: "Aeronaves",
+        price: "$100",
+        image: "/store/aeronaves.png",
+        imageAlt: "Aeronave personalizada volando sobre Vinewood",
+      },
     ],
     terms: [
       "Todos los vehículos pasan por la administración para ajustar su conductividad; el cambio se comenta en el ticket. Podrás probar cómo queda el vehículo antes de pagar para confirmar si es de tu agrado, pero la administración tiene el deber de regularlo por el bien del servidor y mantener un rol justo.",
