@@ -125,6 +125,7 @@ export const storeCategories: StoreCategory[] = [
       "Si algún archivo por separado supera los 14 MB, deberá optimizarse (no genera recargo).",
       "El recargo de $20 aplica únicamente si la carpeta completa del vehículo, sin comprimir, supera los 100 MB.",
       "Todos los vehículos (autos y aeronaves) que traigan armas incorporadas tendrán esas armas desactivadas.",
+      "Para tener una aeronave debes pagar su equivalente completo dentro de la ciudad en IC, además del costo OC (solo en este caso, por tratarse de ítems de lujo y exclusividad).",
     ],
   },
   {
