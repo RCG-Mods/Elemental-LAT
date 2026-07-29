@@ -82,6 +82,8 @@ export const storeMeta = {
 export const storeTerms: string[] = [
   "La compra de cualquier ítem es un acuerdo OOC entre el jugador y el staff; el objeto se entrega dentro del personaje (IC) una vez confirmado el pago.",
   "Los ítems adquiridos son personales e intransferibles salvo que la ficha del ítem indique lo contrario.",
+  "Los negocios que dependen de ítems (armerías, tiendas de accesorios, restaurantes, etc.) incluyen 10 ítems con el valor inicial de compra. Cada ítem adicional cuesta $10 (precios estipulados en la lista de precios).",
+  "Al agregar más de 20 ítems a un local aplica un descuento por volumen del 25% (multiplica lo que desees comprar por 0.75).",
   "El staff se reserva el derecho de ajustar, retirar o balancear cualquier ítem por motivos de estabilidad o economía del servidor.",
   "Ningún ítem otorga ventajas de administración, inmunidad a las normas ni excepciones al reglamento IC/OOC.",
   "Todo archivo entregado tiene derecho a una (1) actualización gratuita, solicitada dentro de las 2 semanas posteriores a la entrega.",
