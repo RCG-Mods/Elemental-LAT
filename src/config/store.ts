@@ -204,14 +204,16 @@ export const storeCategories: StoreCategory[] = [
     jp: "武器",
     icon: "armas",
     tagline: "Armas destinadas a armerías con licencia.",
-    columns: [
-      { key: "categoria", label: "Categoría" },
-      { key: "municion", label: "Munición" },
-      { key: "nota", label: "Notas" },
-    ],
+    layout: "cards",
+    columns: [],
     items: [
-      // PLACEHOLDER — reemplazar con el catálogo real de armas.
-      { name: "Ejemplo — Pistola", price: "—", categoria: "Ligera", municion: "9mm", nota: "Requiere licencia" },
+      {
+        name: "Armas",
+        price: "$10",
+        image: "/store/armas.png",
+        imageAlt: "Fusil personalizado con acabado rojo y dorado",
+        desc: "Cada arma tiene un valor de $10.",
+      },
     ],
     terms: [
       "Todas las armas serán revisadas por la administración.",
