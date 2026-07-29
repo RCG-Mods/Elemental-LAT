@@ -184,18 +184,17 @@ export const storeCategories: StoreCategory[] = [
     jp: "装飾品",
     icon: "prendas",
     tagline: "Cadenas, relojes y accesorios cosméticos para tu personaje.",
-    columns: [
-      { key: "tipo", label: "Tipo" },
-      { key: "efecto", label: "Efecto" },
-      { key: "nota", label: "Notas" },
-    ],
+    layout: "cards",
+    columns: [],
     items: [
-      // PLACEHOLDER — reemplazar con el catálogo real de prendas.
-      { name: "Ejemplo — Cadena de oro", price: "—", tipo: "Accesorio", efecto: "Cosmético", nota: "Pendiente de precio" },
+      {
+        name: "Prendas",
+        price: "$50",
+        image: "/store/cadenas.png",
+        imageAlt: "Cadena personalizada roja en el cuello de un personaje",
+      },
     ],
     terms: [
-      "Las prendas y accesorios son puramente cosméticos salvo que se indique un efecto.",
-      "Un accesorio robado en rol pasa a manos del atacante según las reglas IC.",
       "Cada archivo dentro de la carpeta del accesorio puede pesar como máximo 14 MB.",
     ],
   },
