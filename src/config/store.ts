@@ -211,7 +211,7 @@ export const storeCategories: StoreCategory[] = [
         name: "Armas",
         price: "$10",
         image: "/store/armas.png",
-        imageAlt: "Fusil personalizado con acabado rojo y dorado",
+        imageAlt: "Fusil personalizado con acabado dorado",
         desc: "Cada arma tiene un valor de $10.",
       },
     ],
