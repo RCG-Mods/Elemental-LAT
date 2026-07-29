@@ -80,7 +80,7 @@ export const storeMeta = {
 
 /** Global Terms & Conditions that apply to every purchase. */
 export const storeTerms: string[] = [
-  "Todos los precios se expresan en dólares del servidor (economía IC en USD) y pueden cambiar sin previo aviso.",
+  "Todos los precios se expresan en dólares del servidor (economía IC en USD).",
   "La compra de cualquier ítem es un acuerdo OOC entre el jugador y el staff; el objeto se entrega dentro del personaje (IC) una vez confirmado el pago.",
   "Los ítems adquiridos son personales e intransferibles salvo que la ficha del ítem indique lo contrario.",
   "El staff se reserva el derecho de ajustar, retirar o balancear cualquier ítem por motivos de estabilidad o economía del servidor.",
@@ -91,6 +91,7 @@ export const storeTerms: string[] = [
   "Una vez que la administración agrega, revisa y acepta tu archivo, no puede modificarlo ni cobrarte una modificación de forma forzada por ningún cambio o actualización.",
   "Si un archivo necesita optimización, el comprador debe hacerse cargo de conseguir un servicio de optimización. El servidor puede recomendar dónde hacer las modificaciones, pero revisar y costear el arreglo de pesos es responsabilidad del cliente.",
   "Las propiedades y los vehículos no otorgan ninguna ventaja IC, por lo que su pago debe realizarse con dinero IC (más detalles dentro del ticket sobre el rol). El pago IC es aparte del pago OC.",
+  "Los precios de la tienda solo podrán subir si la administración avisa el alza con un mes de anticipación.",
 ];
 
 /**
