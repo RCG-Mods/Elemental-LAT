@@ -89,6 +89,7 @@ export const storeTerms: string[] = [
   "Después de la actualización gratuita, cada actualización posterior cuesta el 50% del precio original del archivo.",
   "Se considera actualización cualquier archivo nuevo que reemplace al anterior, aunque no tenga relación con el original. Excepción: en las casas, para contar como actualización el archivo debe ubicarse en el mismo lugar físico que la casa anterior.",
   "Una vez que la administración agrega, revisa y acepta tu archivo, no puede modificarlo ni cobrarte una modificación de forma forzada por ningún cambio o actualización.",
+  "Si un archivo necesita optimización, el comprador debe hacerse cargo de conseguir un servicio de optimización. El servidor puede recomendar dónde hacer las modificaciones, pero revisar y costear el arreglo de pesos es responsabilidad del cliente.",
 ];
 
 /**
