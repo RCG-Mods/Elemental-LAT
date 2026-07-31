@@ -179,7 +179,7 @@ producción. No edites esto salvo que cambie el nombre del repo.
 ---
 
 ## Pendientes (TODO)
-- [ ] **Código de conexión FiveM** real (`connectUrl` en `site.ts`).
+- [x] **Código de conexión FiveM** real (`connectUrl` en `site.ts`) → `https://cfx.re/join/zjvro49`.
 - [ ] **Tienda Tebex** real o quitar el enlace (`storeUrl`).
 - [ ] **Capturas reales** para la galería.
 - [ ] Página/sistema de **reglas** (mencionado como "próximamente").

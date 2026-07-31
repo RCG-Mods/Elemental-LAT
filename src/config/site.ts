@@ -10,7 +10,7 @@ export const site = {
   description:
     "Un servidor de rol semi-serio para FiveM, desarrollado por un equipo profesional y pensado para durar años. Diversión, comunidad y sistemas originales — sin vender humo.",
   // FiveM connect code — e.g. "cfx.re/join/xxxxx" or a direct IP
-  connectUrl: "https://cfx.re/join/REEMPLAZAR", // TODO: código de conexión real
+  connectUrl: "https://cfx.re/join/zjvro49", // código de conexión FiveM real
   discordUrl: "https://discord.gg/MVnAg2qkTQ", // invitación permanente de Discord
   storeUrl: "https://elemental-lat.tebex.io", // TODO: tienda Tebex (o quitar)
   // Player-facing highlights (no technical jargon).
